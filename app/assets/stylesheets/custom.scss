@@ -191,13 +191,19 @@ input {
     margin-top: 5em;
     padding-top: 0;
   }
-  .content {
+  .title {
     display: block;
     margin-left: 60px;
     img {
       display: block;
       padding: 5px 0;
     }
+	a {
+    color: white;
+    &:hover {
+      color: $gray-light;
+    }
+  }
   }
   .timestamp {
     color: $gray-light;

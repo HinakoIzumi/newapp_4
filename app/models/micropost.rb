@@ -1,4 +1,6 @@
 class Micropost < ApplicationRecord
+    acts_as_taggable_on :categories,:colors,:patterns
+    #acts_as_taggable            # acts_as_taggable_on :tags のエイリアス
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader

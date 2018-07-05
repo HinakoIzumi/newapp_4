@@ -3,6 +3,26 @@
   <div class="field">
     <%= f.text_area :title, placeholder: "Compose new micropost..." %>
   </div>
+  <div class="field">
+    <%= f.label :category_list, "カテゴリ" %><br>
+	<!--<%= text_field_tag 'micropost[category_list]', @micropost.category_list.join(',') %>-->
+	<%= f.select :category_list, [["トップス", "トップス"], ["ボトムス", "ボトムス"], ["アウター", "アウター"], 
+									["ワンピース", "ワンピース"], ["タイツ・ストッキング", "タイツ・ストッキング"], ["ソックス", "ソックス"],
+									["シューズ", "シューズ"], ["アクセサリー", "アクセサリー"], ["その他", "その他"]] %>
+  </div>
+  <div class="field">
+    <%= f.label :color_list, "カラー" %><br>
+    <%= f.select :color_list, [["ホワイト", "ホワイト"], ["ブラック", "ブラック"], ["グレー", "グレー"], 
+									["ブラウン", "ブラウン"], ["レッド", "レッド"], ["オレンジ", "オレンジ"], 
+									["イエロー", "イエロー"], ["グリーン", "グリーン"], ["ブルー", "ブルー"],
+									["パープル", "パープル"], ["ピンク", "ピンク"], ["その他", "その他"]] %>
+  </div>
+  <div class="field">
+    <%= f.label :pattern_list, "パターン" %><br>
+    <%= f.select :pattern_list, [["無地", "無地"], ["ドット", "ドット"], ["花柄", "花柄"], 
+									["ボーダー", "ボーダー"], ["ストライプ", "ストライプ"], ["チェック", "チェック"], 
+									["アニマル", "アニマル"], ["和柄", "和柄"], ["レース", "レース"],["その他", "その他"]] %>
+  </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
