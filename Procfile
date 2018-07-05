@@ -1,1 +1,1 @@
-web: node ./bin/www
+web: bundle exec rails server -p $PORT
