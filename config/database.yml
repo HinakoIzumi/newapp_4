@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   adapter: mysql2
   database: heroku_83b787b0f4ab5c7
   username: bc47e05d200742
