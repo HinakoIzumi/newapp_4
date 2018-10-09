@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'sessions/new'
 
   get 'users/new'
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
     post   '/login',   to: 'sessions#create'
     delete '/logout',  to: 'sessions#destroy'
     get 'tags/:tag',  to: 'static_pages#home',as: :tag
+    get 'cordinates/name', to: 'cordinates#name'
+    post 'cordinates/name', to: 'cordinates#name'
     resources :users
     resources :microposts,          only: [:create, :destroy]
 end

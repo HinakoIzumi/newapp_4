@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180702133537) do
+ActiveRecord::Schema.define(version: 20180706071035) do
+
+  create_table "cordinates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.integer  "item1"
+    t.integer  "item2"
+    t.integer  "item3"
+    t.integer  "item4"
+    t.integer  "item5"
+    t.integer  "item6"
+    t.integer  "item7"
+    t.integer  "item8"
+    t.integer  "item9"
+    t.integer  "item10"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cordinates_on_user_id", using: :btree
+  end
 
   create_table "microposts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "title",      limit: 65535
@@ -56,5 +73,6 @@ ActiveRecord::Schema.define(version: 20180702133537) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "cordinates", "users"
   add_foreign_key "microposts", "users"
 end

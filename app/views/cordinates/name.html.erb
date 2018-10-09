@@ -1,0 +1,15 @@
+<h1>Cordinates#name</h1>
+<p>Find me in app/views/cordinates/name.html.erb</p>
+<% if @feed_items.any? %>
+  <ol class="microposts">
+    <%= render @feed_items %>
+  </ol>
+  <%= will_paginate @feed_items %>
+<% end %>
+<%= form_for(cordinates_name_url) do |f| %>
+  <div class="field">
+    <%= f.label :item1, "カテゴリ" %><br>
+	<%= f.select :item1,  [["17", "17"]] %>
+  </div>
+   <%= f.submit "Post", class: "btn btn-primary" %>
+  <% end %>
