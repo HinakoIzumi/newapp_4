@@ -3,6 +3,7 @@
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="title">
   	<%= micropost.title %>
+	  <%= micropost.id %>
 	<%= image_tag micropost.picture.url if micropost.picture? %>
 	<div id="tag">
 	  <%= render 'microposts/microposts_tag_list', tag_list: micropost.category_list ,class:"tag"%>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  item1: 1
+  item2: 1
+  item3: 1
+  item4: 1
+  item5: 1
+  item6: 1
+  item7: 1
+  item8: 1
+  item9: 1
+  item10: 1
+
+two:
+  user: two
+  item1: 1
+  item2: 1
+  item3: 1
+  item4: 1
+  item5: 1
+  item6: 1
+  item7: 1
+  item8: 1
+  item9: 1
+  item10: 1
